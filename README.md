@@ -8,7 +8,7 @@ Umbrel App Store.
 
 | App | What it does | Status |
 |---|---|---|
-| **EasyArr** (`w1kyu-easyarr`) | Beginner-friendly, VPN-protected media automation stack (Sonarr, Radarr, Prowlarr, qBittorrent, Jellyfin, …) with a setup wizard. Source: [w1kyu/easyarr](https://github.com/w1kyu/easyarr) | 🚧 coming soon |
+| **EasyArr** (`w1kyu-easyarr`) | Beginner-friendly, VPN-protected media automation stack (Sonarr, Radarr, Prowlarr, qBittorrent, Jellyfin, …) with a setup wizard. Source: [w1kyu/easyarr](https://github.com/w1kyu/easyarr) | 🧪 preview — installs, setup wizard not built yet |
 
 ## Add this store to your Umbrel
 
