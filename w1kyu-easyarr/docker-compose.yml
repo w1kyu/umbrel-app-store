@@ -16,7 +16,7 @@ services:
 
   # One-shot (SPEC §7.4): /data tree, API keys, minimal service configs. Idempotent (D-031).
   init:
-    image: ghcr.io/w1kyu/easyarr:sha-c17ca1b@sha256:822b16285bed9aafe0652ed828a0a651e1664cba6d4a6ebe67a8e86acae9f1ea
+    image: ghcr.io/w1kyu/easyarr:sha-6286334@sha256:666a4744a494ab2cc224d70fd4d94a9a720d6235710858fbab4c1af4addb139f
     user: '0:0'
     command: ['init']
     restart: on-failure
@@ -28,9 +28,9 @@ services:
       - ${UMBREL_ROOT}/data/storage/EasyArr:/data
       - ${APP_DATA_DIR}/data:/appdata
 
-  # Dashboard + setup wizard (phase 02: shell only).
+  # Dashboard + setup wizard.
   dashboard:
-    image: ghcr.io/w1kyu/easyarr:sha-c17ca1b@sha256:822b16285bed9aafe0652ed828a0a651e1664cba6d4a6ebe67a8e86acae9f1ea
+    image: ghcr.io/w1kyu/easyarr:sha-6286334@sha256:666a4744a494ab2cc224d70fd4d94a9a720d6235710858fbab4c1af4addb139f
     restart: on-failure
     depends_on:
       init:
@@ -39,6 +39,8 @@ services:
       TZ: 'Etc/UTC'
     volumes:
       - ${APP_DATA_DIR}/data/easyarr:/easyarr
+      # Read-only: the system check measures free space here (later: disk status on the dashboard).
+      - ${UMBREL_ROOT}/data/storage/EasyArr:/data:ro
 
   # Owns the network namespace for every download/search service (SPEC §5).
   vpn:
