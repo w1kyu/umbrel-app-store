@@ -1,2 +1,2 @@
-id: "sparkles" # Choose the ID for your app store. This should contain only alphabets ("a to z") and dashes ("-").
-name: "Sparkles" # Choose the name of your app store. It will show up in the UI as "<name> App Store".
+id: "w1kyu" # Prefix for every app in this store (apps must be named w1kyu-<app>). Letters a-z and dashes only.
+name: "w1kyu Apps" # Shown in the umbrelOS UI.
